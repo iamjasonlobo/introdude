@@ -25,18 +25,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var schoolNameTextfield: UITextField!
     
+    @IBOutlet weak var hobbiesTextfield: UITextField!
+    @IBOutlet weak var instagramTextfield: UITextField!
     @IBOutlet weak var schoolYearSegmentedControl: UISegmentedControl!
     
     //Create intro function
     @IBAction func createButtonPressed(_ sender: UIButton) {
         let year = schoolYearSegmentedControl.titleForSegment(at: schoolYearSegmentedControl.selectedSegmentIndex)
         
-        let introduction = "My name is \(firstNameTextfield.text!) \(lastNameTextfield.text!) and I attend \(schoolNameTextfield.text!). I am currently in my \(year!) year and I own \(numberOfPetsLabel.text!) dogs. It is \(morePetsSwitch.isOn) that I want more pets."
+        let introduction = "\nHey!, my name is \(firstNameTextfield.text!) \(lastNameTextfield.text!)\nand I attend \(schoolNameTextfield.text!).\n\nI am currently in my \(year!) year and I own \(numberOfPetsLabel.text!) dogs. It is \(morePetsSwitch.isOn) that I want more pets.\n\nMy hobbies include \(hobbiesTextfield.text!).\n\nAdd me on Instagram @\(instagramTextfield.text!)"
         
         print(introduction)
         
         // Creates the alert where we pass in our message, which our introduction.
-        let alertController = UIAlertController(title: "My Introduction", message: introduction, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "My Intro", message: introduction, preferredStyle: .alert)
                 
         // A way to dismiss the box once it pops up
         let action = UIAlertAction(title: "Nice to meet you!", style: .default, handler: nil)
