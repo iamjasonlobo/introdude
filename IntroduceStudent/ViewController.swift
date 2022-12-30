@@ -53,6 +53,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         firstNameTextfield.text = nil
         lastNameTextfield.text = nil
         schoolNameTextfield.text = nil
+        hobbiesTextfield.text = nil
+        instagramTextfield.text = nil
         schoolYearSegmentedControl.selectedSegmentIndex = 0
         numberOfPetsLabel.text = "0"
         morePetsSwitch.setOn(true, animated: true)
